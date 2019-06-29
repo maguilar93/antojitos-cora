@@ -4,7 +4,9 @@
   "description": "antojitos cora website",
   "main": "index.js",
   "dependencies": {
-    "graceful-fs": "^4.1.15"
+    "graceful-fs": "^4.1.15",
+    "lodash": "^4.17.11",
+    "minimatch": "^3.0.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1"
