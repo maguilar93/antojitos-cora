@@ -4,12 +4,16 @@
   "description": "antojitos cora website",
   "main": "index.js",
   "dependencies": {
+    "browser-sync": "^2.26.7",
     "graceful-fs": "^4.1.15",
     "lodash": "^4.17.11",
     "minimatch": "^3.0.4"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
