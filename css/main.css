@@ -154,5 +154,10 @@ footer {
 }
 
 .home {
-  float:left
+  float: left;
+}
+
+/* Pictures in main dish section */
+.foodPicture {
+  width: 30%;
 }
