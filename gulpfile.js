@@ -1,50 +1,36 @@
+"use strict";
+
 const gulp = require("gulp");
 const sass = require("gulp-sass");
-// const autoprefixer = require("gulp-autoprefixer");
+const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 
-// gulp.task("default", ["styles"], function() {
-//   gulp.watch("sass/**/*.scss", ["styles"]);
+gulp.task("browser-sync", function() {
+  gulp.watch("sass/**/*.scss", ["styles"]);
 
-//   browserSync.init({
-//     injectChanges: true,
-//     server: {
-//       baseDir: "./",
-//       directory: true
-//     }
-//   });
-// });
-
-// gulp.task("styles", function() {
-//   gulp
-//     .src("sass/**/*.scss")
-//     .pipe(sass().on("error", sass.logError))
-//     .pipe(
-//       autoprefixer({
-//         browsers: ["last 2 versions"]
-//       })
-//     )
-//     .pipe(gulp.dest("./css"))
-//     .pipe(browserSync.stream());
-// });
-
-// Static Server + watching scss/html files
-gulp.task("serve", ["sass"], function() {
   browserSync.init({
-    server: "./app"
+    injectChanges: true,
+    server: {
+      baseDir: "./",
+      directory: true
+    }
   });
-
-  gulp.watch("app/scss/*.scss", ["sass"]);
-  gulp.watch("app/*.html").on("change", browserSync.reload);
 });
 
-// Compile sass into CSS & auto-inject into browsers
 gulp.task("sass", function() {
   return gulp
-    .src("app/scss/*.scss")
-    .pipe(sass())
-    .pipe(gulp.dest("app/css"))
-    .pipe(browserSync.stream());
+    .src("./scss/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(gulp.dest("./css"))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("default", ["serve"]);
+gulp.task("watch", ["browser-sync"], function() {
+  gulp.watch("./scss/**/*.scss", ["sass"]);
+  gulp.watch("*.html").on("change", browserSync.reload);
+});
