@@ -157,7 +157,20 @@ footer {
   float: left;
 }
 
-/* Pictures in main dish section */
-.foodPicture {
-  width: 30%;
+/* food list in maindish page */
+#foodList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.meal {
+  list-style-type: none;
+  width: 50%;
+  text-align: center;
+  padding-top: 3em;
+}
+
+.meal img {
+  width: 80%;
 }
