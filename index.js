@@ -1,11 +1,11 @@
-// // // Include the server in your file
-// // const server = require('server');
-// // const { get, post } = server.router;
+// // Include the server in your file
+// const server = require('server');
+// const { get, post } = server.router;
 
-// // // Handle requests to the url "/" ( http://localhost:3000/ )
-// // server([
-// //   get('/', ctx => home.html)
-// // ]);
+// // Handle requests to the url "/" ( http://localhost:3000/ )
+// server([
+//   get('/', ctx => home.html)
+// ]);
 
 // const http = require('http');
 
@@ -22,6 +22,7 @@
 // app.listen(3000, '127.0.0.1');
 // console.log('Node server running on port 3000');
 
+
 var express = require("express");
 var app = express();
 
@@ -32,10 +33,15 @@ app.use('/css', express.static(__dirname + '/app/css'));
 app.use('/js', express.static(__dirname + '/app/js'));
 app.use('/img', express.static(__dirname + '/app/img'));
 
-var server = app.listen(8081, function(){
+var port_number = app.listen(process.env.PORT || 3000);
+
+var server = app.listen(port_number, function(){
     var port = server.address().port;
     console.log("Server started at http://localhost:%s", port);
 });
+
+// app.listen(port_number);
+
 
 // var http = require('http'),
 //     fs = require('fs');
