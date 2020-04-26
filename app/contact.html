@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Menu</title>
+    <title>Contáctanos</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/mediaqueries.css" />
     <link
@@ -21,11 +21,9 @@
       <div class="topnav" id="myTopnav">
         <div class="topnav-right">
           <a href="./spanish.html">Home</a>
-          <a href="./sp_maindish.html" class="active home"
-            >Platos Principales</a
-          >
+          <a href="./sp_maindish.html">Platos Principales</a>
           <a href="./sp_desserts.html">Postres</a>
-          <a href="./contact.html">Contáctanos</a>
+          <a href="./contact.html" class="active home">Contáctanos</a>
           <a href="./acerca.html">Acerca de Nosotros</a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -36,31 +34,30 @@
         <h1>Antojitos Cora</h1>
         <h3>Especialidades latinoamericanas</h3>
       </div>
-      <div class="mainBackground">
-        <img
-          src="./backgrounds/fondo_1.jpg"
-          alt="plate of food"
-          class="imgBackground"
-        />
-        <div class="textBackground">
-          <h4>No dejes para mañana lo que puedes comer hoy</h4>
-        </div>
-      </div>
     </header>
-
-    <section class="mainDishes">
-      <h4 class="pageTitle">Platos Principales</h4>
-
-      <div>
-        <ul id="foodList"></ul>
+    <div class="mainContact">
+      <img
+        src="img/contact_background.jpg"
+        alt="blue and white background"
+        class="contactBackground"
+      />
+      <div class="textContactBackground">
+        <h4>Contáctanos ahora y haz tu pedido</h4>
+        <p class="sendText">
+          Envíanos un correo electrónico indicando tu número de teléfono y lo
+          que deseas y nos pondremos en contacto contigo.
+        </p>
+        <a href="mailto:antojitoscora@gmail.com" class="send">
+          <img src="./img/paper-plane.png" class="sendEmail" />
+          <p class="clicText">Haz clic aquí</p>
+        </a>
       </div>
-    </section>
+    </div>
 
     <footer>
       <p>©Antojitos Cora 2019. Derechos Reservados</p>
     </footer>
   </body>
   <script src="./js/main.js"></script>
-  <script src="./js/food-list.js"></script>
   <script src="./gulpfile.js"></script>
 </html>

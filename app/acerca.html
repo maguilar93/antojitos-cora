@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Menu</title>
+    <title>Acerca de nosotros</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/mediaqueries.css" />
     <link
@@ -15,18 +14,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <div class="topnav" id="myTopnav">
         <div class="topnav-right">
           <a href="./spanish.html">Home</a>
-          <a href="./sp_maindish.html" class="active home"
-            >Platos Principales</a
-          >
+          <a href="./sp_maindish.html">Platos Principales</a>
           <a href="./sp_desserts.html">Postres</a>
           <a href="./contact.html">Contáctanos</a>
-          <a href="./acerca.html">Acerca de Nosotros</a>
+          <a href="#" class="active home">Acerca de Nosotros</a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
@@ -36,31 +37,33 @@
         <h1>Antojitos Cora</h1>
         <h3>Especialidades latinoamericanas</h3>
       </div>
-      <div class="mainBackground">
-        <img
-          src="./backgrounds/fondo_1.jpg"
-          alt="plate of food"
-          class="imgBackground"
-        />
-        <div class="textBackground">
-          <h4>No dejes para mañana lo que puedes comer hoy</h4>
-        </div>
-      </div>
     </header>
-
-    <section class="mainDishes">
-      <h4 class="pageTitle">Platos Principales</h4>
-
-      <div>
-        <ul id="foodList"></ul>
+    <div class="mainContact">
+      <img
+        src="img/contact_background.jpg"
+        alt="blue and white background"
+        class="acercaBackground"
+      />
+      <div class="acercaContent">
+        <img
+          src="img/latino.jpg"
+          alt="street in latin america"
+          class="streetImg"
+        />
+        <p class="acercaText">
+          Nuestra cultura está llena de colores y de sabores. Originarios de
+          Nicaragua, decidimos descubrir los sabores del resto de Latinoamérica.
+          Nuestro sazón es completamente latino, con recetas de todos nuestros
+          países. Tenemos una hambre constante y siempre queremos aprender y
+          probar más.
+        </p>
       </div>
-    </section>
+    </div>
 
     <footer>
       <p>©Antojitos Cora 2019. Derechos Reservados</p>
     </footer>
   </body>
   <script src="./js/main.js"></script>
-  <script src="./js/food-list.js"></script>
   <script src="./gulpfile.js"></script>
 </html>

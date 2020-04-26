@@ -21,10 +21,8 @@
       <div class="topnav" id="myTopnav">
         <div class="topnav-right">
           <a href="./spanish.html">Home</a>
-          <a href="./sp_maindish.html" class="active home"
-            >Platos Principales</a
-          >
-          <a href="./sp_desserts.html">Postres</a>
+          <a href="./sp_maindish.html">Platos Principales</a>
+          <a href="./sp_desserts.html" class="active home">Postres</a>
           <a href="./contact.html">Contáctanos</a>
           <a href="./acerca.html">Acerca de Nosotros</a>
         </div>
@@ -43,16 +41,16 @@
           class="imgBackground"
         />
         <div class="textBackground">
-          <h4>No dejes para mañana lo que puedes comer hoy</h4>
+          <h4 class="postre">¡Estoy llenísimo/a! </br> ¿Qué hay de postre?</h4>
         </div>
       </div>
     </header>
 
     <section class="mainDishes">
-      <h4 class="pageTitle">Platos Principales</h4>
+      <h4 class="pageTitle">Postres</h4>
 
-      <div>
-        <ul id="foodList"></ul>
+      <div onload="createDessertItem()">
+        <ul id="dessertList"></ul>
       </div>
     </section>
 
@@ -61,6 +59,6 @@
     </footer>
   </body>
   <script src="./js/main.js"></script>
-  <script src="./js/food-list.js"></script>
+  <script src="./js/dessert-list.js"></script>
   <script src="./gulpfile.js"></script>
 </html>

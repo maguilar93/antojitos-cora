@@ -1,96 +1,287 @@
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .topnav a:not(:first-child) {
-    display: none; }
+    display: none;
+  }
   .topnav a.icon {
     float: right;
-    display: block; } }
+    display: block;
+  }
+}
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .topnav.responsive {
-    position: relative; }
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
-    top: 0; }
+    top: 0;
+  }
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left; } }
+    text-align: left;
+  }
+}
+
+/* Small screen */
+@media screen and (min-width: 375px) {
+  #mealImg,
+  #dessertImg {
+    height: 200px;
+  }
+  #ingredients,
+  #description {
+    top: 61%;
+    height: 75%;
+  }
+  .acercaBackground {
+    height: 295px;
+  }
+  .streetImg {
+    width: 60%;
+    top: 30%;
+  }
+  .acercaText {
+    top: 60%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .imgBackground {
+    height: 280px;
+  }
+  .mainTitle {
+    font-size: 23px;
+  }
+  .meal,
+  .dessert {
+    width: 385px;
+  }
+  .streetImg {
+    width: 35%;
+  }
+  .acercaText {
+    width: 50%;
+    left: 22.5%;
+  }
+}
+
+@media screen and (min-width: 736px) and (orientation: landscape) {
+  .streetImg {
+    top: 35%;
+  }
+  .acercaText {
+    top: 65%;
+  }
+}
 
 /* iPad mode */
 @media screen and (min-width: 768px) {
   .topnav {
     height: 60px;
-    line-height: 30px; }
+    line-height: 30px;
+  }
   .topnav-right {
-    float: right; }
+    float: right;
+  }
   .imgBackground {
     min-width: 110%;
     height: 100%;
-    margin-left: 0; }
-  h4 {
+    margin-left: 0;
+  }
+  .textBackground h4 {
     font-size: 1.5em;
     padding-left: 15%;
-    padding-right: 15%; }
+    padding-right: 15%;
+  }
   .mainOptions {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    /* padding-top: 10%; */ }
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
   .info {
-    margin-top: 10%; }
+    margin-top: 10%;
+  }
   .infoOptions {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display: inline-flex; }
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
   .infoDetails {
-    display: block; }
+    display: block;
+  }
   .infoDetails img {
     float: none;
     width: 50%;
     height: 50%;
-    margin-left: 30%; }
+    margin-left: 30%;
+  }
   .infoDetails p {
     float: none;
     width: 90%;
-    text-align: center; }
+    text-align: center;
+  }
+  .meal,
+  .dessert {
+    width: 40%;
+    min-width: 385px;
+  }
+  #mealImg,
+  #dessertImg {
+    height: 250px;
+  }
+  #ingredients,
+  #description {
+    top: 59%;
+    height: 80%;
+  }
+  #ingredients p,
+  #description p {
+    padding-top: 20%;
+  }
+  .pageTitle {
+    font-size: 2em;
+  }
+  .contactBackground,
+  .acercaBackground {
+    height: 600px;
+    margin-left: 0;
+  }
+  .textContactBackground {
+    height: 72%;
+  }
+  .textContactBackground h4 {
+    font-size: 2.5em;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .sendText {
+    font-size: 1.75em;
+  }
+  .clicText {
+    font-size: 15px;
+  }
+  .streetImg {
+    width: 50%;
+  }
+  .acercaText {
+    line-height: 1.5em;
+    top: 55%;
+    font-size: 18px;
+  }
   footer {
-    font-size: 1em; } }
+    font-size: 1em;
+  }
+}
 
 /* desktop size */
 @media screen and (min-width: 1000px) {
-  h2 {
-    font-size: 2em; }
-  h5 {
-    font-size: 1.5em; }
+  .mainTitle {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
   .imgBackground {
     min-width: 110%;
-    height: 30em; }
+    height: 30em;
+  }
   .textBackground {
     width: 100%;
-    height: 10em; }
-  h4 {
+    height: 10em;
+  }
+  .textBackground h4 {
     font-size: 2em;
     padding-top: 1.5%;
-    padding-bottom: 2%; }
+    padding-bottom: 2%;
+  }
+  .textBackground .postre {
+    padding-top: 0;
+  }
   .mainOptions {
     margin: 0 10%;
-    padding-top: 8%; }
+    padding-top: 8%;
+  }
   .info {
     padding: 3%;
-    margin-top: 8%; }
+    margin-top: 8%;
+  }
   .infoOptions {
-    margin: 0 10%; }
+    margin: 0 10%;
+  }
+  .meal,
+  .dessert {
+    width: 30%;
+  }
+  .pageTitle {
+    font-size: 2.5em;
+  }
   footer {
     padding-top: 1%;
-    padding-bottom: 1%; } }
+    padding-bottom: 1%;
+  }
+  .contactBackground,
+  .acercaBackground {
+    max-width: 100%;
+    height: 800px;
+  }
+  .textContactBackground {
+    max-width: 100%;
+    top: 50%;
+    height: 65%;
+  }
+  .textContactBackground h4 {
+    font-size: 3em;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+  }
+  .acercaText {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .acercaText {
+    top: 60%;
+  }
+}
+
+@media screen and (min-width: 1366px) and (orientation: landscape) {
+  .acercaText {
+    top: 70%;
+  }
+}
 
 /* big screen */
 @media screen and (min-width: 1700px) {
   .imgBackground {
-    height: 40em; } }
+    height: 40em;
+  }
+  .meal,
+  .dessert {
+    width: 25%;
+  }
+  .contactBackground,
+  .acercaBackground {
+    height: 60em;
+  }
+  .streetImg {
+    top: 35%;
+    width: 40%;
+  }
+  .acercaText {
+    top: 65%;
+    left: 30%;
+    width: 40%;
+    margin: 3em auto;
+  }
+}
