@@ -1,0 +1,44 @@
+{
+  "name": "antojitos-cora",
+  "version": "1.0.0",
+  "description": "antojitos cora website",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "express": "^4.17.1",
+    "graceful-fs": "^4.1.15",
+    "http-server": "^0.12.1",
+    "kind-of": "^6.0.3",
+    "loader.js": "^4.7.0",
+    "lodash": "^4.17.14",
+    "lodash.template": "^4.5.0",
+    "minimatch": "^3.0.4",
+    "minimist": "^1.2.5",
+    "server": "^1.0.27",
+    "server.js": "^1.0.0",
+    "set-value": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maguilar93/antojitos-cora.git"
+  },
+  "keywords": [
+    "restaurant"
+  ],
+  "author": "Maria Aguilar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maguilar93/antojitos-cora/issues"
+  },
+  "homepage": "https://github.com/maguilar93/antojitos-cora#readme"
+}
