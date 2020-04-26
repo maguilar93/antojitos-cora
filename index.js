@@ -26,9 +26,10 @@
 var express = require("express");
 var app = express();
 
-app.use(express.static('./app'));
+app.use(express.static('./app', {index: 'spanish.html'}));
 
 //make way for some custom css, js and images
+// app.use(express.static('../client/', {index: 'login.html'}))
 app.use('/css', express.static(__dirname + '/app/css'));
 app.use('/js', express.static(__dirname + '/app/js'));
 app.use('/img', express.static(__dirname + '/app/img'));
